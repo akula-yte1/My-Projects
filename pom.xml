@@ -1,3 +1,8 @@
+# Remove the corrupt file
+rm pom.xml
+
+# Create a proper pom.xml
+cat > pom.xml << 'EOF'
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -19,7 +24,6 @@
     </properties>
 
     <dependencies>
-        <!-- JUnit 5 for testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -38,3 +42,4 @@
         </plugins>
     </build>
 </project>
+EOF
